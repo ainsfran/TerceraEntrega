@@ -7,5 +7,5 @@ En la seccion TEAM, se encontrara todo lo referido a informacion de los empleado
 En la seccion PROJECT MANAGER, se encontrara todo lo referido a informacion de los projects managers y se podra ingresar nombre, apellido, email y profesion.
 En la seccion PROJECTS, se encontrara todo lo referido a informacion de los proyectos y se podra ingresar nombre, fecha de entrega y decir si fue entregado.
 
-En la ruta /admin/ para acceder al panel de administrador.
+En la ruta /admin/ para acceder al panel de administrador. Con el usuario: ainsfran contraseña: clase123
 En la ruta /busquedacamada/ se podra buscar una camada
