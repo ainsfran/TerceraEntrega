@@ -24,3 +24,4 @@ class Proyecto(models.Model):
     nombre = models.CharField(max_length=30)
     fechaentrega = models.DateField()
     entregado = models.BooleanField()
+
