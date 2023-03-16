@@ -105,9 +105,12 @@ def buscar(request):
         camada = request.GET['camada']
         equipos = Equipos.objects.filter(camada_incontains=camada)
 
-        return render(request, 'resultadosbusqueda.html', {'equipos':equipos, 'camada':camada} )
+        return render(request, 'resultadobusqueda.html', {'equipos':equipos, 'camada':camada} )
     
     else:
         respuesta= 'Esos datos no fueron ingresados' 
 
     return render(request, 'inicio.html', {'respuesta': respuesta})
+
+def resultadoBusquedav(request):
+   return render(request, "resultadobusqueda.html")
