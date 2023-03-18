@@ -11,6 +11,6 @@ urlpatterns = [
     #path('trabajadorFormulario', views.trabajadorFormulario, name='TrabajadorFormulario'),
     #path('projectmanageFormulario', views.projectmanagerFormulario, name='ProjectmanagerFormulario'),
     #path('proyectoFormulario', views.proyectoFormulario, name='ProyectoFormulario'),
-    path('busquedacamada', views.busquedacamada, name='busquedacamada'),
+    path('busquedacamada', views.busquedacamada, name='Busquedacamada'),
     path('buscar/', views.buscar),
 ]

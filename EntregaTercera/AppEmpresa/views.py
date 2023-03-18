@@ -9,21 +9,6 @@ from AppEmpresa.forms import equiposFormulario, trabajadorFormulario, projectman
 def inicio(request):
     
     return render(request, 'inicio.html')
-
-def equipos(request):
-
-    return render(request, 'equipos.html')
-
-def trabajador(request):
-
-    return render(request, 'trabajador.html')
-
-def projectmanager(request):
-
-    return render(request, 'projectmanager.html')
-
-def proyecto(request):
-     return render(request, 'proyecto.html')
  
 def equipos(request):
     
@@ -40,7 +25,7 @@ def equipos(request):
     else:
         miFormulario = equiposFormulario()
  
-    return render(request, 'equipoFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'equipos.html', {'miFormulario': miFormulario})
 
 def trabajador(request):
     
@@ -57,7 +42,7 @@ def trabajador(request):
     else:
         miFormulario = trabajadorFormulario()
  
-    return render(request, 'trabajadorFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'trabajador.html', {'miFormulario': miFormulario})
 
 def projectmanager(request):
     
@@ -75,7 +60,7 @@ def projectmanager(request):
     else:
         miFormulario = projectmanagerFormulario()
  
-    return render(request, 'projectmanagerFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'projectmanager.html', {'miFormulario': miFormulario})
 
 def proyecto(request):
     
@@ -92,7 +77,7 @@ def proyecto(request):
     else:
         miFormulario = proyectoFormulario()
  
-    return render(request, 'proyectoFormulario.html', {'miFormulario': miFormulario})
+    return render(request, 'proyecto.html', {'miFormulario': miFormulario})
 
 def busquedacamada(request):
 
@@ -103,14 +88,13 @@ def buscar(request):
     if request.GET['camada']:
 
         camada = request.GET['camada']
-        equipos = Equipos.objects.filter(camada_incontains=camada)
-
-        return render(request, 'resultadobusqueda.html', {'equipos':equipos, 'camada':camada} )
+        equipos = Equipos.objects.filter(camada__icontains=camada)
+       
+        return render(request, 'inicio.html', {'equipos':equipos, 'camada':camada} )
     
     else:
         respuesta= 'Esos datos no fueron ingresados' 
 
     return render(request, 'inicio.html', {'respuesta': respuesta})
 
-def resultadoBusquedav(request):
-   return render(request, "resultadobusqueda.html")
+

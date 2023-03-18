@@ -7,6 +7,9 @@
     <title>Formulario - Agregar Servicies</title>
 </head>
 <body>
+    {% extends 'padre.html' %}
+
+    {% load static %}
 
     {% if miFormulario.errors %}
     <p style="color: blueviolet;"> Estan mal los datos, revisar</p>
