@@ -11,8 +11,11 @@
     {% endfor %}
 
     </ul>
+    {% else %}
+    <p>Esos datos no fueron ingresados. </p>
 
     {% endif %}
+
+    <p style="color:red;"> {{respuesta}}</p>
 {% endblock %}
 
-<p style="color:red;"> {{respuesta}}</p>
